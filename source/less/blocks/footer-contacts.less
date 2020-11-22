@@ -1,0 +1,96 @@
+.footer-contacts {
+  display: flex;
+  flex-direction: column;
+
+  padding: 40px 20px 32px;
+
+  background-color: @grey;
+}
+
+.social {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 20px 0;
+
+  border-top: 1px solid #D9D9D9;
+  border-bottom: 1px solid #D9D9D9;
+}
+
+.social__link {
+  margin-right: 36px;
+
+  position: relative;
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+  &:before {
+    display: block;
+    content: "";
+  }
+}
+
+.social__link--vkontakte:before {
+  width: 23px;
+  height: 16px;
+
+  background-image: url(../img/social/vkontakte.svg);
+  background-repeat: no-repeat;
+}
+
+.social__link--instagram:before {
+  width: 16px;
+  height: 16px;
+
+  background-image: url(../img/social/instagram.svg);
+  background-repeat: no-repeat;
+}
+
+.social__link--facebook:before {
+  width: 22px;
+  height: 22px;
+
+  background-image: url(../img/social/facebook.svg);
+  background-repeat: no-repeat;
+}
+
+.copyright {
+  margin-top: 28px;
+
+  a {
+    display: block;
+
+    color: @dark-grey;
+    font-family: @sub-font;
+    font-size: 16px;
+    line-height: 18px;
+
+    text-decoration: none;
+    position: relative;
+
+    &:active {
+      opacity: .3;
+    }
+
+    &:before {
+      content: "";
+
+      width: 27px;
+      height: 34px;
+
+      background-image: url(../img/logo/htmlacademy.svg);
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+
+      position: absolute;
+      top: 50%;
+      right: 0;
+
+      transform: translateY(-50%);
+    }
+  }
+}

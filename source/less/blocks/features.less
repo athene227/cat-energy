@@ -1,0 +1,92 @@
+.features {
+  padding: 27px 20px 0;
+
+  background-color: @white;
+
+  h2 {
+    margin-top: 0;
+    margin-bottom: 38px;
+  }
+}
+
+.features__list {
+  list-style: none;
+
+  margin: 0;
+  padding: 0;
+  padding-bottom: 46px;
+}
+
+.features__item {
+  font-family: @sub-font;
+
+  min-height: 60px;
+  margin-bottom: 20px;
+  padding-left: 80px;
+
+  position: relative;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  &:before {
+    content: "";
+
+    width: 60px;
+    height: 60px;
+
+    background-color: @green;
+
+    position: absolute;
+    top: 0px;
+    left: 0;
+  }
+
+  &:after {
+    content: "";
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+  }
+}
+
+.features__item--leaf:after {
+  width: 30px;
+  height: 32px;
+
+  background-image: url(../img/icons/leaf.svg);
+
+  top: 14px;
+  left: 15px;
+}
+
+.features__item--tub:after {
+  width: 29px;
+  height: 31px;
+
+  background-image: url(../img/icons/tub.svg);
+
+  top: 13px;
+  left: 15px;
+}
+
+.features__item--eat:after {
+  width: 25px;
+  height: 30px;
+
+  background-image: url(../img/icons/eat.svg);
+
+  top: 15px;
+  left: 18px;
+}
+
+.features__item--alarm:after {
+  width: 32px;
+  height: 33px;
+
+  background-image: url(../img/icons/alarm.svg);
+
+  top: 13px;
+  left: 14px;
+}
