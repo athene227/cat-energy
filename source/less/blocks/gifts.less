@@ -1,0 +1,41 @@
+.gifts {
+  padding: 40px 20px 35px;
+}
+
+.gifts__item {
+  width: 280px;
+  height: 290px;
+
+  background: url(../img/gifts/gift-bg.jpg);
+
+  position: relative;
+
+  &::before {
+    content: "";
+
+    width: 80px;
+    height: 80px;
+
+    background-image: url(../img/gifts/gift.svg);
+    background-repeat: no-repeat;
+
+    position: absolute;
+    top: 58px;
+    left: 50%;
+
+    transform: translateX(-50%);
+  }
+}
+
+.gifts__title {
+  color: @white;
+  font-family: @sub-font;
+  font-size: 16px;
+  line-height: 20px;
+
+  text-align: center;
+
+  width: 160px;
+  margin: 0 auto;
+  padding-top: 186px;
+}
