@@ -1,17 +1,22 @@
+.address {
+  background-color: @white;
+
+  &--background {
+    background-color: @grey;
+  }
+}
 
 .address__description {
   display: flex;
   justify-content: space-between;
 
-  padding: 28px 20px 22px;
-
-  background-color: @white;
+  padding: 30px 20px 35px;
 }
 
 .address__title {
-  color: #111;
+  color: #111111;
   font-size: 16px;
-  line-height: 20px;
+  line-height: 1.25;
   font-weight: 400;
 
   text-transform: uppercase;
@@ -22,17 +27,17 @@
 
 .address__text {
   font-family: @sub-font;
-  line-height: 20px;
+  line-height: 1.4;
 
   width: 50%;
   margin: 0;
 }
 
 .address__map {
-  width: 320px;
-  height: 362px;
+  height: 360px;
 
   iframe {
+    width: 100vw;
     border: none;
   }
 }

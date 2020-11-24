@@ -1,0 +1,27 @@
+body {
+  color: @dark-grey;
+  font-family: @main-font;
+  font-size: 14px;
+  line-height: 1.2;
+  font-weight: 400;
+
+  margin: 0;
+  background-color: @white;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.page {
+  height: 100%;
+}
+
+.page-body {
+  display: grid;
+  grid-template-rows: min-content 1fr min-content;
+  align-content: start;
+
+  min-height: 100%;
+}

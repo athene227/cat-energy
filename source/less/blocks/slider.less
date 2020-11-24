@@ -10,40 +10,33 @@
   width: 230px;
 
   margin: 0 auto;
-  margin-top: 23px;
+  margin-top: 25px;
   padding: 0 10px;
+}
+
+.slider__button {
+  color: @black;
+  font-size: 16px;
+  line-height: 1.25;
+
+  text-transform: uppercase;
+  cursor: pointer;
 }
 
 .slider__range {
   width: 84px;
   height: 14px;
-
   padding: 3px 5px;
 
   background-color: @white;
-  border: 1px solid #CDCDCD;
+  border: 1px solid @border-color-secondary;
   border-radius: 6px;
-}
-
-.slider__scale {
-  width: 74px;
-  height: 6px;
-
-  border-radius: 6px;
+  box-sizing: border-box;
 }
 
 .slider__bar {
   width: 35px;
   height: 6px;
-
   background-color: @green;
   border-radius: 6px;
-}
-
-.slider__button {
-  font-size: 16px;
-  line-height: 20px;
-
-  text-transform: uppercase;
-  cursor: pointer;
 }

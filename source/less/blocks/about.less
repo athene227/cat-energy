@@ -1,31 +1,20 @@
 .about {
-  padding-bottom: 22px;
+  padding-bottom: 20px;
   background-color: @white;
-
-  h1 {
-    color: @white;
-    font-size: 36px;
-    line-height: 36px;
-    font-weight: 400;
-
-    text-align: center;
-
-    margin: 0;
-    margin-bottom: 25px;
-    padding-top: 27px;
-  }
 }
 
 .about__text {
-  height: 300px;
-  padding-bottom: 130px;
+  min-height: 300px;
   margin-bottom: 138px;
+  padding-bottom: 130px;
 
   background:
     linear-gradient(fade(@green, 85), fade(@green, 85)),
     url(../img/backgrounds/cat-bg.jpg);
   background-repeat: no-repeat;
   background-position: center;
+
+  box-sizing: border-box;
 
   position: relative;
 
@@ -46,15 +35,22 @@
   }
 }
 
-.button--about {
-  max-width: 280px;
-  margin: 0 auto;
+.about__title {
+  color: @white;
+  font-size: 36px;
+  line-height: 1;
+  font-weight: 400;
+
+  text-align: center;
+
+  margin-top: 0;
+  margin-bottom: 25px;
+  padding-top: 25px;
 }
 
-.slogan {
+.about__slogan {
   color: @white;
   font-size: 14px;
-  line-height: 14px;
   font-weight: 400;
 
   text-align: center;
