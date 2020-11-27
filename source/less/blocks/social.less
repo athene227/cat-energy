@@ -8,6 +8,11 @@
 
   border-top: 1px solid @border-color;
   border-bottom: 1px solid @border-color;
+
+  @media (min-width: @tablet-width) {
+    padding: 0;
+    border: none;
+  }
 }
 
 .social__link {
@@ -19,7 +24,7 @@
     margin-right: 0;
   }
 
-  &:before {
+  &::before {
     display: block;
     content: "";
 
@@ -40,5 +45,14 @@
 
   &--facebook:before {
     background-image: url(../img/social/facebook.svg);
+  }
+
+  @media (min-width: @tablet-width) {
+    margin-right: 20px;
+
+    &::before {
+      width: 30px;
+      height: 30px;
+    }
   }
 }

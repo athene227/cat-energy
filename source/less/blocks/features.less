@@ -1,11 +1,24 @@
 .features {
   padding: 25px 20px 0;
-
   background-color: @white;
 
   .title {
     margin-top: 0;
     margin-bottom: 40px;
+  }
+
+  @media (min-width: @tablet-width) {
+    padding: 45px 30px 0;
+    border-bottom: 1px solid #e6e6e6;
+
+    .title {
+      margin-bottom: 70px;
+    }
+
+    @media (min-width: @desktop-width) {
+      padding: 0;
+      border-bottom: none;
+    }
   }
 }
 
@@ -14,65 +27,109 @@
 
   margin-top: 0;
   margin-bottom: 0;
+
   padding-left: 0;
-  padding-bottom: 45px;
+  padding-bottom: 20px;
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    padding-bottom: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 80px;
+  }
 }
 
 .features__item {
   font-family: @sub-font;
 
   min-height: 60px;
+
   margin-bottom: 20px;
   padding-left: 80px;
 
   position: relative;
+  z-index: 2;
 
-  &:last-child {
-    margin-bottom: 0;
-  }
-
-  &:before {
+  &::before {
     content: "";
 
     width: 60px;
     height: 60px;
 
     background-color: @green;
+    background-repeat: no-repeat;
+    background-position: center;
 
     position: absolute;
     top: 0;
     left: 0;
   }
 
-  &:after {
-    content: "";
-
-    width: 30px;
-    height: 32px;
-
-    margin-top: -15px;
-
-    background-repeat: no-repeat;
-    background-position: center;
-
-    position: absolute;
-    top: 50%;
-    left: 15px;
+  &--leaf::before {
+    background-image: url(../img/icons/leaf.svg);
   }
-}
+  &--tub::before {
+    background-image: url(../img/icons/tub.svg);
+  }
+  &--eat::before {
+    background-image: url(../img/icons/eat.svg);
+  }
+  &--alarm::before {
+    background-image: url(../img/icons/alarm.svg);
+  }
 
-.features__item--leaf:after {
-  background-image: url(../img/icons/leaf.svg);
-}
+  @media (min-width: @tablet-width) {
+    font-size: 16px;
+    line-height: 1.5;
 
-.features__item--tub:after {
-  background-image: url(../img/icons/tub.svg);
-}
+    width: 245px;
+    min-height: 130px;
 
-.features__item--eat:after {
-  background-image: url(../img/icons/eat.svg);
-}
+    margin-bottom: 70px;
+    margin-right: 80px;
+    padding-top: 117px;
+    padding-left: 0;
 
-.features__item--alarm:after {
-  background-image: url(../img/icons/alarm.svg);
+    &::before {
+      width: 80px;
+      height: 80px;
+    }
+
+    &::after {
+      color: @grey;
+      font-family: @main-font;
+      font-size: 280px;
+      line-height: 210px;
+
+      position: absolute;
+      top: 0;
+      right: 0;
+
+      z-index: -1;
+    }
+
+    &--leaf::after {
+      content: "1";
+    }
+    &--tub::after {
+      content: "2";
+    }
+    &--eat::after {
+      content: "3";
+    }
+    &--alarm::after {
+      content: "4";
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-right: 0;
+  }
 }

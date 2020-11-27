@@ -1,18 +1,55 @@
 .about {
-  padding-bottom: 20px;
   background-color: @white;
+
+  @media (min-width: @tablet-width) {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-left: 0;
+    padding-right: 0;
+
+    .container {
+      position: relative;
+      z-index: 1;
+
+      &::after {
+        content: "";
+
+        width: 720px;
+        height: 694px;
+
+        background-image:
+        linear-gradient(fade(@green, 85), fade(@green, 85)),
+        url(../img/backgrounds/cat-large.jpg);
+        background-repeat: no-repeat;
+
+        position: absolute;
+        top: -112px;
+        right: -110px;
+
+        z-index: -1;
+      }
+    }
+  }
 }
 
 .about__text {
+  color: @white;
+  text-align: center;
+
   min-height: 300px;
-  margin-bottom: 138px;
-  padding-bottom: 130px;
+
+  margin-bottom: 160px;
+  padding: 25px 20px 130px;
 
   background:
     linear-gradient(fade(@green, 85), fade(@green, 85)),
-    url(../img/backgrounds/cat-bg.jpg);
+    url(../img/backgrounds/cat-small.jpg);
   background-repeat: no-repeat;
   background-position: center;
+  background-size: cover;
 
   box-sizing: border-box;
 
@@ -26,35 +63,103 @@
 
     background-image: url(../img/backgrounds/food.png);
     background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
 
     position: absolute;
     left: 50%;
-    bottom: -140px;
+    bottom: -130px;
 
     transform: translateX(-50%);
+  }
+
+  @media (min-width: @tablet-width) {
+    color: @black;
+    text-align: left;
+
+    min-height: 820px;
+    margin-bottom: 0;
+    padding-left: 90px;
+    padding-right: 0;
+    padding-bottom: 0;
+
+    background: none;
+
+    &::before {
+      width: 710px;
+      height: 610px;
+
+      left: 380px;
+      bottom: -20px;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 610px;
+    min-height: 582px;
+
+    padding-top: 90px;
+    padding-left: 80px;
+    padding-right: 50px;
+
+    &::before {
+      width: 550px;
+      height: 500px;
+
+      top: 8px;
+      left: 725px;
+    }
   }
 }
 
 .about__title {
-  color: @white;
   font-size: 36px;
   line-height: 1;
   font-weight: 400;
 
-  text-align: center;
-
   margin-top: 0;
   margin-bottom: 25px;
-  padding-top: 25px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 60px;
+    margin-bottom: 40px;
+  }
 }
 
 .about__slogan {
-  color: @white;
   font-size: 14px;
   font-weight: 400;
 
-  text-align: center;
   text-transform: uppercase;
-
   margin-top: 0;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+  }
+}
+
+.about__button {
+  width: 280px;
+  box-sizing: border-box;
+
+  position: absolute;
+  left: 50%;
+  bottom: -160px;
+
+  transform: translateX(-50%);
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+
+    width: 244px;
+    margin-top: 50px;
+    padding: 15px 26px;
+
+    position: static;
+    transform: translateX(0);
+  }
+
+  @media (min-width: @desktop-width) {
+    // position: static;
+  }
 }

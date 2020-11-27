@@ -1,5 +1,22 @@
 .header {
   padding-top: 12px;
-
   background-color: @white;
+
+  @media (min-width: @tablet-width) {
+    padding-top: 0;
+
+    .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      padding: 24px 30px;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    .container {
+      padding-top: 50px;
+    }
+  }
 }

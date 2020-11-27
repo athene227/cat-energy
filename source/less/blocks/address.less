@@ -1,16 +1,29 @@
 .address {
+  display: flex;
+  justify-content: space-between;
+
+  padding: 30px 20px;
   background-color: @white;
 
   &--background {
     background-color: @grey;
   }
-}
 
-.address__description {
-  display: flex;
-  justify-content: space-between;
+  @media (min-width: @tablet-width) {
+    padding: 60px 70px;
+  }
 
-  padding: 30px 20px 35px;
+  @media (min-width: @desktop-width) {
+    width: 570px;
+    height: 200px;
+
+    padding: 65px 75px;
+    box-sizing: border-box;
+
+    position: absolute;
+    top: 95px;
+    left: 110px;
+  }
 }
 
 .address__title {
@@ -22,7 +35,13 @@
   text-transform: uppercase;
 
   width: 50%;
-  margin: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    width: 170px;
+  }
 }
 
 .address__text {
@@ -31,13 +50,15 @@
 
   width: 50%;
   margin: 0;
-}
 
-.address__map {
-  height: 360px;
+  @media (min-width: @tablet-width) {
+    font-size: 16px;
+    text-align: right;
+    width: 160px;
 
-  iframe {
-    width: 100vw;
-    border: none;
+    span {
+      display: inline-block;
+      margin-top: 10px;
+    }
   }
 }
