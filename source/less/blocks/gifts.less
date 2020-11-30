@@ -1,5 +1,13 @@
 .gifts {
-  padding: 40px 20px 35px;
+  margin-top: 40px;
+
+  @media (min-width: @tablet-width) {
+    margin-top: 70px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-top: 0;
+  }
 }
 
 .gifts__item {
@@ -26,17 +34,60 @@
 
     transform: translateX(-50%);
   }
+
+  @media (min-width: @tablet-width) {
+    padding: 70px 105px 70px 420px;
+
+    background-position: 0 -350px;
+    background-size: cover;
+
+    &::before {
+      top: 50%;
+      left: 78px;
+
+      transform: translate(0, -50%);
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 0;
+    padding-bottom: 40px;
+
+    background-position: center;
+    background-size: contain;
+
+    &::before {
+      top: 58px;
+      left: 50%;
+
+      transform: translate(-50%, 0);
+    }
+  }
 }
 
 .gifts__title {
   color: @white;
   font-family: @sub-font;
   font-size: 16px;
-  line-height: 20px;
+  line-height: 1.25;
 
   text-align: center;
 
   width: 160px;
   margin: 0 auto;
   padding-top: 185px;
+
+  @media (min-width: @tablet-width) {
+    text-align: left;
+    width: auto;
+    margin: 0;
+    padding-top: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    text-align: center;
+    width: 160px;
+    margin: 0 auto;
+    padding-top: 185px;
+  }
 }
