@@ -117,18 +117,26 @@
         </div>
 
         <div class="slider">
-          <img class="slider__img" src="img/slider/cat-before.png" width="311" height="232" alt="Толстый кот">
+          <input id="btn-1" class="slider__radio-before visually-hidden" type="radio" name="toggle" checked="">
+          <input id="btn-2" class="slider__radio-after visually-hidden" type="radio" name="toggle">
 
-          <div class="slider__control">
-            <span class="slider__button">было</span>
+          <div class="slider__inner">
+            <picture>
+              <source media="(min-width: 768px)" srcset="img/slider/cat-tablet.png">
+
+              <img class="slider__img slider__img--before" src="img/slider/cat-before.png" alt="">
+              <img class="slider__img slider__img--after" src="img/slider/cat-after.png" alt="">
+            </picture>
+          </div>
+
+          <div class="slider__controls">
+            <label for="btn-1" class="slider__button">Было</label>
 
             <div class="slider__range">
-              <div class="slider__scale">
-                <div class="slider__bar"></div>
-              </div>
+              <div class="slider__bar"></div>
             </div>
 
-            <span class="slider__button">стало</span>
+            <label for="btn-2" class="slider__button">Стало</label>
           </div>
         </div>
       </div>
