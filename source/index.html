@@ -11,7 +11,12 @@
   <header class="header">
     <div class="container">
       <a class="logo logo--header" href="">
-        <img src="img/logo/logo.svg" alt="Кэт энерджи">
+        <picture>
+          <source media="(min-width: 1440px)" srcset="img/icons/logo-desktop.svg">
+          <source media="(min-width: 768px)" srcset="img/icons/logo-tablet.svg">
+
+          <img src="img/icons/logo.svg" alt="Кэт энерджи">
+        </picture>
       </a>
 
       <nav class="nav">
@@ -21,7 +26,7 @@
 
         <ul class="nav__list nav__list--index">
           <li class="nav__item">
-            <a class="nav__link nav__link--active">Главная</a>
+            <a class="nav__link nav__link--active" href="">Главная</a>
           </li>
 
           <li class="nav__item">
@@ -122,10 +127,10 @@
 
           <div class="slider__inner">
             <picture>
-              <source media="(min-width: 768px)" srcset="img/slider/cat-tablet.png">
+              <source media="(min-width: 768px)" srcset="img/slider/cat-tablet.png, img/retina/slider/cat-tablet@2x">
 
-              <img class="slider__img slider__img--before" src="img/slider/cat-before.png" alt="">
-              <img class="slider__img slider__img--after" src="img/slider/cat-after.png" alt="">
+              <img class="slider__img slider__img--before" src="img/slider/cat-before.png" alt="Толстый кот">
+              <img class="slider__img slider__img--after" src="img/slider/cat-after.png" alt="Худой кот">
             </picture>
           </div>
 
@@ -163,7 +168,7 @@
         <h2 class="visually-hidden">Наши контакты</h2>
 
         <a class="logo logo--footer" href="">
-          <img src="img/logo/footer-logo.svg" alt="Кэт энерджи">
+          <img src="img/icons/logo-text.svg" alt="Кэт энерджи">
         </a>
 
         <div class="social">

@@ -75,6 +75,8 @@
 
 .additional-goods__content {
   @media (min-width: @tablet-width) {
+    display: flex;
+    justify-content: space-between;
     margin-bottom: 25px;
   }
 
@@ -120,6 +122,7 @@
   @media (min-width: @tablet-width) {
     display: inline-flex;
     justify-content: flex-end;
+    align-items: flex-end;
     margin-bottom: 0;
 
     dd {
@@ -130,6 +133,7 @@
   @media (min-width: @desktop-width) {
     width: 285px;
     justify-content: space-between;
+    align-items: center;
     flex-wrap: wrap;
   }
 }

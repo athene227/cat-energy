@@ -11,7 +11,12 @@
   <header class="header">
     <div class="container">
       <a class="logo logo--header" href="index.html">
-        <img src="img/logo/logo.svg" alt="Кэт энерджи">
+        <picture>
+          <source media="(min-width: 1440px)" srcset="img/icons/logo-desktop.svg">
+          <source media="(min-width: 768px)" srcset="img/icons/logo-tablet.svg">
+
+          <img src="img/icons/logo.svg" alt="Кэт энерджи">
+        </picture>
       </a>
 
       <nav class="nav">
@@ -176,7 +181,7 @@
         <h2 class="visually-hidden">Наши контакты</h2>
 
         <a class="logo logo--footer" href="index.html">
-          <img src="img/logo/footer-logo.svg" alt="Кэт энерджи">
+          <img src="img/icons/logo-text.svg" alt="Кэт энерджи">
         </a>
 
         <div class="social">

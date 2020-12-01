@@ -1,5 +1,7 @@
 .about {
   background-color: @white;
+  position: relative;
+  z-index: 1;
 
   @media (min-width: @tablet-width) {
     padding-left: 30px;
@@ -10,28 +12,25 @@
     padding-left: 0;
     padding-right: 0;
 
-    .container {
-      position: relative;
-      z-index: 1;
 
-      &::after {
-        content: "";
+    &::after {
+      content: "";
 
-        width: 720px;
-        height: 694px;
+      width: 50%;
+      height: 694px;
 
-        background-image:
-        linear-gradient(fade(@green, 85), fade(@green, 85)),
-        url(../img/backgrounds/cat-large.jpg);
-        background-repeat: no-repeat;
+      background-image:
+      linear-gradient(fade(@green, 85), fade(@green, 85)),
+      url(../img/backgrounds/cat-desktop.jpg);
+      background-repeat: no-repeat;
 
-        position: absolute;
-        top: -112px;
-        right: -110px;
+      position: absolute;
+      top: -137px;
+      right: 0;
 
-        z-index: -1;
-      }
+      z-index: -2;
     }
+
   }
 }
 
@@ -41,12 +40,12 @@
 
   min-height: 300px;
 
-  margin-bottom: 160px;
-  padding: 25px 20px 130px;
+  margin-bottom: 175px;
+  padding: 25px 20px 136px;
 
   background:
     linear-gradient(fade(@green, 85), fade(@green, 85)),
-    url(../img/backgrounds/cat-small.jpg);
+    url(../img/backgrounds/cat.jpg);
   background-repeat: no-repeat;
   background-position: center;
 
@@ -67,7 +66,7 @@
 
     position: absolute;
     left: 50%;
-    bottom: -130px;
+    bottom: -136px;
 
     transform: translateX(-50%);
   }
@@ -88,7 +87,9 @@
       width: 710px;
       height: 610px;
 
-      left: 380px;
+      background-image: url(../img/backgrounds/food-tablet.png);
+
+      left: 360px;
       bottom: -20px;
     }
   }
@@ -105,8 +106,12 @@
       width: 550px;
       height: 500px;
 
+      background-image: url(../img/backgrounds/food-desktop.png);
+
       top: 8px;
       left: 725px;
+
+      z-index: -1;
     }
   }
 }
@@ -143,7 +148,7 @@
 
   position: absolute;
   left: 50%;
-  bottom: -160px;
+  bottom: -175px;
 
   transform: translateX(-50%);
 
