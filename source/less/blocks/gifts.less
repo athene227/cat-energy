@@ -50,7 +50,11 @@
     padding-top: 70px;
     padding-bottom: 70px;
 
-    background-image: url(../../img/backgrounds/gift-tablet.jpg);
+    background-image: url(../img/backgrounds/gift-tablet.jpg);
+
+    @media (min-resolution: 2dppx) {
+      background-image: url(../img/retina/backgrounds/gift-tablet@2x.jpg);
+    }
 
     &::before {
       top: 50%;
