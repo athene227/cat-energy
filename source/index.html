@@ -127,10 +127,15 @@
 
           <div class="slider__inner">
             <picture>
-              <source media="(min-width: 768px)" srcset="img/slider/cat-tablet.png, img/retina/slider/cat-tablet@2x">
+              <source media="(min-width: 768px)" srcset="img/slider/before-tablet.png, img/retina/slider/before-tablet@2x.png 2x">
 
-              <img class="slider__img slider__img--before" src="img/slider/cat-before.png" alt="Толстый кот">
-              <img class="slider__img slider__img--after" src="img/slider/cat-after.png" alt="Худой кот">
+              <img class="slider__img slider__img--before" src="img/slider/cat-before.png" srcset="img/retina/slider/cat-before@2x.png 2x" width="311" height="232" alt="Толстый кот">
+            </picture>
+
+            <picture>
+              <source media="(min-width: 768px)" srcset="img/slider/after-tablet.png, img/retina/slider/after-tablet@2x.png 2x">
+
+              <img class="slider__img slider__img--after" src="img/slider/cat-after.png" srcset="img/retina/slider/cat-after@2x.png 2x" width="251" height="240" alt="Худой кот">
             </picture>
           </div>
 

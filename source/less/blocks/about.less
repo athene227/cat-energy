@@ -49,8 +49,16 @@
   background-repeat: no-repeat;
   background-position: center;
 
-  box-sizing: border-box;
+  @media (min-resolution: 2dppx) {
+    background:
+      linear-gradient(fade(@green, 85), fade(@green, 85)),
+      url(../img/retina/backgrounds/cat@2x.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+  }
 
+  box-sizing: border-box;
   position: relative;
 
   &:before {
@@ -63,6 +71,10 @@
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url(../img/retina/backgrounds/food@2x.png);
+    }
 
     position: absolute;
     left: 50%;
@@ -87,7 +99,7 @@
       width: 710px;
       height: 610px;
 
-      background-image: url(../img/backgrounds/food-tablet.png);
+      background-image: url(../img/backgrounds/food-tablet.jpg);
 
       left: 360px;
       bottom: -20px;

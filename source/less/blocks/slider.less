@@ -26,6 +26,7 @@
 .slider__inner {
   display: flex;
   justify-content: center;
+  align-items: flex-end;
 
   height: 250px;
 
@@ -48,6 +49,20 @@
     left: 50%;
 
     transform: translateX(-50%);
+  }
+}
+
+.slider__img--before {
+  @media (min-width: @tablet-width) {
+    width: 677px;
+    height: 520px;
+  }
+}
+
+.slider__img--after {
+  @media (min-width: @tablet-width) {
+    width: 545px;
+    height: 520px;
   }
 }
 
