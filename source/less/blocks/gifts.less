@@ -6,6 +6,7 @@
   }
 
   @media (min-width: @desktop-width) {
+    width: 245px;
     margin-top: 0;
   }
 }
@@ -15,7 +16,14 @@
 
   background: url(../img/backgrounds/gift.jpg);
   background-repeat: no-repeat;
+  background-position: center;
 
+  @media (min-resolution: 2dppx) {
+    background-image: url(../img/retina/backgrounds/gift@2x.jpg);
+    background-size: contain;
+  }
+
+  box-sizing: border-box;
   position: relative;
 
   &::before {
@@ -35,7 +43,12 @@
   }
 
   @media (min-width: @tablet-width) {
-    padding: 70px 105px 70px 420px;
+    width: 708px;
+    min-height: 200px;
+
+    margin: 0 auto;
+    padding-top: 70px;
+    padding-bottom: 70px;
 
     background-image: url(../../img/backgrounds/gift-tablet.jpg);
 
@@ -48,10 +61,12 @@
   }
 
   @media (min-width: @desktop-width) {
+    width: auto;
     padding: 0;
     padding-bottom: 40px;
 
     background-image: url(../img/backgrounds/gift.jpg);
+    background-size: cover;
 
     &::before {
       top: 58px;
@@ -77,7 +92,9 @@
   @media (min-width: @tablet-width) {
     text-align: left;
     width: auto;
-    margin: 0;
+
+    margin-left: 420px;
+    margin-right: 105px;
     padding-top: 0;
   }
 
