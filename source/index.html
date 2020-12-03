@@ -9,7 +9,7 @@
 <body class="page__body">
 
   <header class="header">
-    <div class="container">
+    <div class="container container--header">
       <a class="logo logo--header" href="">
         <picture>
           <source media="(min-width: 1440px)" srcset="img/icons/logo-desktop.svg">
@@ -19,8 +19,8 @@
         </picture>
       </a>
 
-      <nav class="nav">
-        <button class="nav__toggle nav__toggle--active" type="button">
+      <nav class="nav nav--closed nav--nojs">
+        <button class="nav__toggle" type="button">
           <span class="nav__toggle-item" aria-label="Открыть меню"></span>
         </button>
 
@@ -140,13 +140,13 @@
           </div>
 
           <div class="slider__controls">
-            <label for="btn-1" class="slider__button">Было</label>
+            <label for="btn-1" class="slider__button slider__button--before">Было</label>
 
             <div class="slider__range">
               <div class="slider__bar"></div>
             </div>
 
-            <label for="btn-2" class="slider__button">Стало</label>
+            <label for="btn-2" class="slider__button slider__button--after">Стало</label>
           </div>
         </div>
       </div>
@@ -188,6 +188,23 @@
       </div>
     </section>
   </footer>
+
+  <script>
+    var navMain = document.querySelector('.nav');
+    var navToggle = document.querySelector('.nav__toggle');
+
+    navMain.classList.remove('nav--nojs');
+
+    navToggle.addEventListener('click', function() {
+      if (navMain.classList.contains('nav--closed')) {
+        navMain.classList.remove('nav--closed');
+        navMain.classList.add('nav--opened');
+      } else {
+        navMain.classList.add('nav--closed');
+        navMain.classList.remove('nav--opened');
+      }
+    });
+  </script>
 
 </body>
 </html>
