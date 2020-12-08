@@ -115,19 +115,11 @@
 
   margin-bottom: 15px;
 
-  dd {
-    margin-left: 0;
-  }
-
   @media (min-width: @tablet-width) {
     display: inline-flex;
     justify-content: flex-end;
     align-items: flex-end;
     margin-bottom: 0;
-
-    dd {
-      margin-left: 50px;
-    }
   }
 
   @media (min-width: @desktop-width) {
@@ -135,5 +127,13 @@
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
+  }
+}
+
+.additional-goods__description-text {
+  margin-left: 0;
+
+  @media (min-width: @tablet-width) {
+    margin-left: 50px;
   }
 }
