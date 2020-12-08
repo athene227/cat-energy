@@ -1,81 +1,207 @@
 .info {
-  padding-top: 27px;
-  padding-bottom: 25px;
+  padding-top: 25px;
   background-color: @simple-grey;
 
-  h2 {
+  .title {
     margin-top: 0;
-    margin-bottom: 33px;
+    margin-bottom: 35px;
   }
 
-  p {
-    font-family: @sub-font;
-    margin-top: 0;
+  @media (min-width: @tablet-width) {
+    padding-top: 40px;
+    background-color: @white;
+
+    .title {
+      margin-bottom: 70px;
+    }
   }
 
-  .cost {
-    color: @black;
-    font-family: @main-font;
-    font-size: 14px;
-    line-height: 20px;
+  @media (min-width: @desktop-width) {
+    min-height: 575px;
+    padding-top: 0;
+    background-color: @grey;
 
-    text-align: center;
+    position: relative;
+    z-index: 1;
+
+    .title {
+      margin-bottom: 145px;
+    }
+
+    .container {
+      position: relative;
+    }
+
+    &::before {
+      content: "";
+      width: 100%;
+      height: 130px;
+
+      background-color: #fff;
+
+      position: absolute;
+      top: 0;
+      left: 0;
+
+      z-index: -1;
+    }
   }
 }
 
 .info__container {
   padding: 0 20px;
-  margin-bottom: 42px;
+  margin-bottom: 40px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 250px;
+    padding: 0 30px;
+  }
+
+  @media (min-width: @desktop-width) {
+    max-width: 570px;
+    padding: 0;
+    margin-bottom: 0;
+  }
 }
 
-.result {
+.info__text {
+  font-family: @sub-font;
+  margin-top: 0;
+
+  @media (min-width: @tablet-width) {
+    font-size: 16px;
+    line-height: 1.5;
+  }
+}
+
+.info__stats {
+  margin-top: 25px;
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    margin-top: 50px;
+  }
+
+  @media (min-width: @desktop-width) {
+    flex-direction: column;
+    margin-top: 70px;
+  }
+}
+
+.info__result {
   display: flex;
   justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
 
   width: 280px;
-  margin: 25px auto 34px;
+  margin: 0 auto 35px;
+
+  @media (min-width: @tablet-width) {
+    width: 366px;
+    margin: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 55px;
+  }
 }
 
-.result__box {
-  display: flex;
-  justify-content: center;
-
+.info__result-box {
   text-align: center;
 
-  min-width: 124px;
-  height: 56px;
+  min-width: 125px;
+  min-height: 55px;
 
-  padding: 0 5px;
+  padding: 15px;
 
-  border: 1px solid #CDCDCD;
+  border: 1px solid @border-color-secondary;
   border-radius: 3px;
+  box-sizing: border-box;
 
   position: relative;
 
-  dt {
-    color: @black;
-    font-size: 24px;
-    line-height: 24px;
+  @media (min-width: @tablet-width) {
+    min-width: 162px;
+    min-height: 72px;
+  }
+}
 
-    margin-top: 14px;
+.info__result-title {
+  font-family: @sub-font;
+  font-size: 12px;
+  line-height: 1;
+
+  width: 77px;
+  padding: 0 5px;
+
+  background-color: @simple-grey;
+
+  position: absolute;
+  left: 50%;
+  bottom: -17px;
+
+  transform: translateX(-50%);
+
+  @media (min-width: @tablet-width) {
+    font-size: 14px;
+
+    width: 100px;
+    padding: 0 8px;
+
+    background-color: @white;
+    bottom: -6px;
+
+    &--large {
+      width: 130px;
+    }
   }
 
-  dd {
-    font-family: @sub-font;
-    font-size: 12px;
-    line-height: 12px;
+  @media (min-width: @desktop-width) {
+    background-color: @grey;
+  }
+}
 
-    width: 87px;
+.info__result-description {
+  color: @black;
+  font-size: 24px;
+  line-height: 1;
 
-    margin: 0;
-    padding: 0 5px;
+  text-transform: uppercase;
+  margin-left: 0;
 
-    background-color: @simple-grey;
+  @media (min-width: @tablet-width) {
+    font-size: 30px;
+  }
+}
 
-    position: absolute;
-    bottom: -16px;
-    left: 50%;
+.info__cost {
+  color: @black;
+  font-family: @main-font;
+  font-size: 14px;
+  line-height: 1.4;
 
-    transform: translateX(-50%);
+  text-align: center;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+
+    text-align: right;
+    text-transform: uppercase;
+
+    width: 175px;
+    margin-top: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    text-align: left;
+    width: auto;
+
+    span {
+      margin-left: 60px;
+    }
   }
 }
