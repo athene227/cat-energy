@@ -152,7 +152,7 @@
     border: 1px solid @border-color-secondary;
     border-radius: 50%;
 
-    box-shadow: 0 1px 3px rgba(0,0,0, 0.16);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.16);
     cursor: pointer;
 
     position: absolute;
@@ -179,12 +179,12 @@
 
     &:hover,
     &:focus {
-      box-shadow: 0 2px 4px rgba(0,0,0, 0.19);
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.19);
     }
 
     &:active {
       border-color: @green;
-      box-shadow: 0 3px 5px rgba(0,0,0, 0.2);
+      box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
     }
   }
 }
@@ -192,12 +192,15 @@
 .slider__radio-before:checked ~ .slider__inner .slider__img--before {
   display: block;
 }
+
 .slider__radio-before:checked ~ .slider__controls .slider__button--before {
   border-bottom: 1px dotted @black;
 }
+
 .slider__radio-before:checked ~ .slider__controls .slider__range {
   justify-content: flex-start;
 }
+
 .slider__radio-before:checked ~ .slider__controls .slider__bar {
   @media (min-width: @tablet-width) {
     left: 0;
@@ -207,12 +210,15 @@
 .slider__radio-after:checked ~ .slider__inner .slider__img--after {
   display: block;
 }
+
 .slider__radio-after:checked ~ .slider__controls .slider__button--after {
   border-bottom: 1px dotted @black;
 }
+
 .slider__radio-after:checked ~ .slider__controls .slider__range {
   justify-content: flex-end;
 }
+
 .slider__radio-after:checked ~ .slider__controls .slider__bar {
   @media (min-width: @tablet-width) {
     left: 100%;
