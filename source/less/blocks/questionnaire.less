@@ -1,11 +1,24 @@
 .questionnaire {
   padding-top: 25px;
   padding-bottom: 30px;
+
+  @media (min-width: @tablet-width) {
+    padding-top: 40px;
+    padding-bottom: 70px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 50px;
+  }
 }
 
 .questionnaire__preview {
   color: @black;
   padding: 0 20px;
+
+  @media (min-width: @tablet-width) {
+    padding: 0;
+  }
 }
 
 .questionnaire__title {
@@ -15,8 +28,18 @@
 
   margin-top: 0;
   margin-bottom: 35px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 60px;
+    margin-bottom: 55px;
+  }
 }
 
 .questionnaire__text {
   text-transform: uppercase;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 1.5;
+  }
 }

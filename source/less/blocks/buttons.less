@@ -23,6 +23,23 @@
     color: @button-active;
   }
 
+  &--form {
+    line-height: 1.25;
+
+    width: 280px;
+    margin: 0 auto;
+
+    @media (min-width: @tablet-width) {
+      font-size: 20px;
+      margin: 0;
+      padding: 13px;
+    }
+
+    @media (min-width: @desktop-width) {
+      width: 570px;
+    }
+  }
+
   &--secondary {
     color: @dark-grey;
     background-color: @grey;

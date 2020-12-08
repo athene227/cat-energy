@@ -9,12 +9,24 @@
     padding-right: 0;
   }
 
-  .title {
-    color: @black;
-    font-size: 24px;
-    line-height: 1.1;
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 1.5;
+    margin-top: 65px;
+  }
+}
 
-    margin-bottom: 35px;
+.form__container {
+  @media (min-width: @desktop-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-gap: 80px;
+
+    .form__group {
+      margin-top: 0;
+      margin-bottom: 0;
+    }
   }
 }
 
@@ -25,11 +37,36 @@
   border: none;
 
   &--border {
-    padding-top: 25px;
-    padding-bottom: 30px;
+    padding-top: 30px;
+    padding-bottom: 25px;
 
     border-top: 1px solid @border-color;
     border-bottom: 1px solid @border-color;
+  }
+
+  @media (min-width: @tablet-width) {
+    margin-top: 65px;
+    margin-bottom: 65px;
+    padding-left: 0;
+    padding-right: 0;
+
+    &--border {
+      margin-top: 70px;
+      margin-bottom: 75px;
+      padding-left: 30px;
+      padding-right: 30px;
+      padding-bottom: 30px;
+
+      border: 1px solid @border-color;
+    }
+
+    &--margin {
+      margin-bottom: 60px;
+
+      .form__title {
+        margin-bottom: 60px;
+      }
+    }
   }
 }
 
@@ -42,6 +79,29 @@
 
   &:last-child {
     margin-bottom: 0;
+  }
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 20px;
+  }
+
+  @media (min-width: @desktop-width) {
+    &--margin {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.form__title {
+  color: @black;
+  font-size: 24px;
+  line-height: 1.1;
+
+  margin-bottom: 35px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 36px;
+    margin-bottom: 75px;
   }
 }
 
@@ -64,6 +124,12 @@
     color: @dark-grey;
     opacity: 1;
   }
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
 }
 
 .form__list {
@@ -72,10 +138,14 @@
   padding-left: 45px;
 
   list-style: none;
+
+  @media (min-width: @tablet-width) {
+    padding-left: 60px;
+  }
 }
 
 .form__option {
-  margin-bottom: 25px;
+  margin-bottom: 24px;
 
   &:last-child {
     margin-bottom: 0;
@@ -124,17 +194,29 @@
 .form__message {
   color: @dark-grey;
   font-family: @main-font;
+  font-size: 16px;
   text-transform: uppercase;
+
+  min-width: 100%;
+  height: 150px;
 
   margin-top: 0;
   margin-bottom: 0;
-  padding: 12px 15px;
+  padding: 9px 12px 9px 15px;
 
   border: 1px solid #e7e7e7;
+  box-sizing: border-box;
   resize: none;
 
   &::placeholder {
     opacity: 1;
+  }
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    padding: 10px 20px;
+
+    height: 174px;
   }
 }
 
@@ -153,12 +235,21 @@
 
   transform: translateY(-50%);
   box-sizing: border-box;
+
+  @media (min-width: @tablet-width) {
+    left: -60px;
+  }
 }
 
 .form__option .form__label::before {
   width: 30px;
   height: 30px;
   border: 1px solid @border-color-secondary;
+
+  @media (min-width: @tablet-width) {
+    width: 40px;
+    height: 40px;
+  }
 }
 
 .form__list--radio {
@@ -175,6 +266,12 @@
     background-color: @green;
     border-radius: 50%;
     left: -37px;
+
+    @media (min-width: @tablet-width) {
+      width: 18px;
+      height: 18px;
+      left: -48px;
+    }
   }
 }
 
@@ -188,7 +285,37 @@
 
     background-image: url(../img/icons/checkbox.svg);
     background-repeat: no-repeat;
-    left: -37px;
+    left: -38px;
+
+    @media (min-width: @tablet-width) {
+      left: -48px;
+    }
+  }
+
+  @media (min-width: @tablet-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 40px 60px;
+
+    padding-left: 0;
+
+    .form__option {
+      margin-bottom: 0px;
+      padding-left: 60px;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 40px 80px;
+  }
+}
+
+.form__footer {
+  @media (min-width: @tablet-width) {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
   }
 }
 
@@ -198,7 +325,19 @@
   font-size: 14px;
 
   text-align: center;
+
   margin-top: 20px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 16px;
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: 60px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-left: 80px;
+  }
 }
 
 /* Chrome, Safari, Edge, Opera */
