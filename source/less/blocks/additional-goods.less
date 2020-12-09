@@ -1,5 +1,5 @@
 .additional-goods {
-  padding: 30px 20px 0;
+  padding: 30px 20px 35px;
 
   .title {
     color: @black;
@@ -10,14 +10,38 @@
     margin-top: 0;
     margin-bottom: 35px;
   }
+
+  @media (min-width: @tablet-width) {
+    padding: 70px 30px 75px;
+
+    .title {
+      font-size: 36px;
+      margin-bottom: 80px;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-bottom: 85px;
+  }
+}
+
+.additional-goods__box {
+  @media (min-width: @desktop-width) {
+    display: grid;
+    grid-template-columns: 895px 245px;
+    grid-column-gap: 80px;
+  }
 }
 
 .additional-goods__list {
   list-style: none;
 
-  margin-top: 35px;
   margin-bottom: 0;
   padding-left: 0;
+
+  @media (min-width: @desktop-width) {
+    margin-top: 0;
+  }
 }
 
 .additional-goods__item {
@@ -29,6 +53,39 @@
   &:last-child {
     border-bottom: 1px solid @border-color-secondary;
   }
+
+  @media (min-width: @tablet-width) {
+    padding: 28px 38px;
+
+    border-right: 1px solid @border-color-secondary;
+    border-left: 1px solid @border-color-secondary;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    align-items: center;
+    grid-column-gap: 40px;
+
+    padding: 15px 0;
+    border-left: none;
+    border-right: none;
+  }
+}
+
+.additional-goods__content {
+  @media (min-width: @tablet-width) {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 25px;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: 0;
+  }
 }
 
 .additional-goods__title-item {
@@ -39,18 +96,44 @@
 
   margin-top: 0;
   margin-bottom: 10px;
+
+  @media (min-width: @tablet-width) {
+    display: inline-block;
+
+    font-size: 20px;
+    margin-bottom: 0;
+  }
 }
 
 .additional-goods__description {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
 
   font-family: @sub-font;
   font-size: 14px;
 
   margin-bottom: 15px;
 
-  dd {
-    margin-left: 0;
+  @media (min-width: @tablet-width) {
+    display: inline-flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    margin-bottom: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 285px;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+}
+
+.additional-goods__description-text {
+  margin-left: 0;
+
+  @media (min-width: @tablet-width) {
+    margin-left: 50px;
   }
 }

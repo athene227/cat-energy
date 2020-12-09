@@ -2,6 +2,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
 
   padding-top: 20px;
   padding-bottom: 20px;
@@ -16,43 +17,42 @@
 }
 
 .social__link {
-  margin-right: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  color: #666666;
+
+  width: 30px;
+  height: 30px;
+  margin-right: 25px;
 
   position: relative;
+  transition: 0.2s;
 
   &:last-child {
     margin-right: 0;
   }
 
-  &::before {
-    display: block;
-    content: "";
+  &:hover,
+  &:focus {
+    color: @green;
+  }
+}
 
-    width: 25px;
-    height: 25px;
-
-    background-repeat: no-repeat;
-    background-position: center;
+@media (min-width: @tablet-width) {
+  .social__icon-vkontakte {
+    width: 30px;
+    height: 22px;
   }
 
-  &--vkontakte:before {
-    background-image: url(../img/social/vkontakte.svg);
+  .social__icon-instagram {
+    width: 23px;
+    height: 23px;
   }
 
-  &--instagram:before {
-    background-image: url(../img/social/instagram.svg);
-  }
-
-  &--facebook:before {
-    background-image: url(../img/social/facebook.svg);
-  }
-
-  @media (min-width: @tablet-width) {
-    margin-right: 20px;
-
-    &::before {
-      width: 30px;
-      height: 30px;
-    }
+  .social__icon-facebook {
+    width: 28px;
+    height: 33px;
   }
 }

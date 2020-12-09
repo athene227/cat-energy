@@ -1,0 +1,38 @@
+.copyright {
+  margin-top: 20px;
+
+  &:active {
+    opacity: 0.3;
+  }
+
+  @media (min-width: @tablet-width) {
+    margin-top: 0;
+  }
+}
+
+.copyright__link {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  color: @dark-grey;
+  font-family: @sub-font;
+  font-size: 16px;
+  line-height: 1.125;
+
+  text-decoration: none;
+
+  &:hover .copyright__icon-academy,
+  &:focus .copyright__icon-academy {
+    color: @green;
+  }
+
+  @media (min-width: @tablet-width) {
+    width: 165px;
+  }
+}
+
+.copyright__icon-academy {
+  color: #666666;
+  transition: 0.2s;
+}

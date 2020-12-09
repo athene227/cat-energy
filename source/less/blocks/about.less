@@ -1,5 +1,7 @@
 .about {
   background-color: @white;
+  position: relative;
+  z-index: 1;
 
   @media (min-width: @tablet-width) {
     padding-left: 30px;
@@ -10,27 +12,30 @@
     padding-left: 0;
     padding-right: 0;
 
-    .container {
-      position: relative;
-      z-index: 1;
 
-      &::after {
-        content: "";
+    &::after {
+      content: "";
 
-        width: 720px;
-        height: 694px;
+      width: 50%;
+      height: 694px;
 
-        background-image:
+      background-image:
         linear-gradient(fade(@green, 85), fade(@green, 85)),
-        url(../img/backgrounds/cat-large.jpg);
-        background-repeat: no-repeat;
+        url("../img/backgrounds/cat-desktop.jpg");
+      background-repeat: no-repeat;
 
-        position: absolute;
-        top: -112px;
-        right: -110px;
-
-        z-index: -2;
+      @media (min-resolution: 2dppx) {
+        background-image:
+          linear-gradient(fade(@green, 85), fade(@green, 85)),
+          url("../img/retina/backgrounds/cat-desktop@2x.jpg");
+        background-size: 1044px auto;
       }
+
+      position: absolute;
+      top: -137px;
+      right: 0;
+
+      z-index: -2;
     }
   }
 }
@@ -41,32 +46,45 @@
 
   min-height: 300px;
 
-  margin-bottom: 160px;
-  padding: 25px 20px 130px;
+  margin-bottom: 175px;
+  padding: 25px 20px 136px;
 
   background:
     linear-gradient(fade(@green, 85), fade(@green, 85)),
-    url(../img/backgrounds/cat-small.jpg);
+    url("../img/backgrounds/cat.jpg");
   background-repeat: no-repeat;
   background-position: center;
+
+  @media (min-resolution: 2dppx) {
+    background:
+      linear-gradient(fade(@green, 85), fade(@green, 85)),
+      url("../img/retina/backgrounds/cat@2x.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+  }
 
   box-sizing: border-box;
   position: relative;
 
-  &:before {
+  &::before {
     content: "";
 
     width: 280px;
     height: 270px;
 
-    background-image: url(../img/backgrounds/food.png);
+    background-image: url("../img/backgrounds/food.png");
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
 
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/retina/backgrounds/food@2x.png");
+    }
+
     position: absolute;
     left: 50%;
-    bottom: -130px;
+    bottom: -136px;
 
     transform: translateX(-50%);
   }
@@ -87,7 +105,13 @@
       width: 710px;
       height: 610px;
 
-      left: 380px;
+      background-image: url("../img/backgrounds/food-tablet.jpg");
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../img/retina/backgrounds/food-tablet@2x.jpg");
+      }
+
+      left: 360px;
       bottom: -20px;
     }
   }
@@ -104,8 +128,15 @@
       width: 550px;
       height: 500px;
 
+      background-image: url("../img/backgrounds/food-desktop.png");
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../img/retina/backgrounds/food-desktop@2x.png");
+      }
+
       top: 8px;
       left: 725px;
+
       z-index: -1;
     }
   }
@@ -143,7 +174,7 @@
 
   position: absolute;
   left: 50%;
-  bottom: -160px;
+  bottom: -175px;
 
   transform: translateX(-50%);
 

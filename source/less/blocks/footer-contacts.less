@@ -1,5 +1,5 @@
 .footer-contacts {
-  padding: 40px 20px 30px;
+  padding: 40px 20px 20px;
   background-color: @grey;
 
   .container {
@@ -15,52 +15,6 @@
       justify-content: space-between;
       align-items: center;
       flex-wrap: wrap;
-    }
-  }
-}
-
-.footer__copyright {
-  margin-top: 30px;
-
-  a {
-    display: block;
-
-    color: @dark-grey;
-    font-family: @sub-font;
-    font-size: 16px;
-    line-height: 18px;
-
-    text-decoration: none;
-    position: relative;
-
-    &:active {
-      opacity: .3;
-    }
-
-    &::before {
-      content: "";
-
-      width: 27px;
-      height: 34px;
-
-      background-image: url(../img/logo/htmlacademy.svg);
-      background-repeat: no-repeat;
-      background-position: center;
-      background-size: cover;
-
-      position: absolute;
-      top: 50%;
-      right: 0;
-
-      transform: translateY(-50%);
-    }
-  }
-
-  @media (min-width: @tablet-width) {
-    margin-top: 0;
-
-    a {
-      padding-right: 50px;
     }
   }
 }
