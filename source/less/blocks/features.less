@@ -12,7 +12,7 @@
     border-bottom: 1px solid #e6e6e6;
 
     .title {
-      margin-bottom: 70px;
+      margin-bottom: 72px;
     }
 
     @media (min-width: @desktop-width) {
@@ -32,11 +32,11 @@
   padding-bottom: 20px;
 
   @media (min-width: @tablet-width) {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 74px 60px;
 
-    padding-bottom: 0;
+    padding-bottom: 44px;
   }
 
   @media (min-width: @desktop-width) {
@@ -95,9 +95,8 @@
     width: 245px;
     min-height: 130px;
 
-    margin-bottom: 70px;
-    margin-right: 80px;
-    padding-top: 117px;
+    margin-bottom: 0;
+    padding-top: 113px;
     padding-left: 0;
 
     &::before {
@@ -120,6 +119,7 @@
 
     &--leaf::after {
       content: "1";
+      right: 15px;
     }
 
     &--tub::after {

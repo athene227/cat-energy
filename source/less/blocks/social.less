@@ -11,6 +11,7 @@
   border-bottom: 1px solid @border-color;
 
   @media (min-width: @tablet-width) {
+    margin-left: 30px;
     padding: 0;
     border: none;
   }
@@ -38,20 +39,28 @@
   &:focus {
     color: @green;
   }
+
+  @media (min-width: @tablet-width) {
+    margin-right: 20px;
+  }
 }
 
-@media (min-width: @tablet-width) {
-  .social__icon-vkontakte {
+.social__icon-vkontakte {
+  @media (min-width: @tablet-width) {
     width: 30px;
     height: 22px;
   }
+}
 
-  .social__icon-instagram {
+.social__icon-instagram {
+  @media (min-width: @tablet-width) {
     width: 23px;
     height: 23px;
   }
+}
 
-  .social__icon-facebook {
+.social__icon-facebook {
+  @media (min-width: @tablet-width) {
     width: 28px;
     height: 33px;
   }
