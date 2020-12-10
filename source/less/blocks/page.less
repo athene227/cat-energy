@@ -1,11 +1,19 @@
 .page {
+  font-family: @main-font;
+  font-size: 14px;
+  line-height: 18px;
+
   height: 100%;
 }
 
-.page-body {
+.page__body {
   display: grid;
   grid-template-rows: min-content 1fr min-content;
   align-content: start;
 
+  color: @dark-grey;
   min-height: 100%;
+  margin: 0;
+
+  background-color: @white;
 }

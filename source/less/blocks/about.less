@@ -1,5 +1,18 @@
 .about {
-  background-color: @white;
+  background-color: @green;
+  background-image:
+    linear-gradient(fade(@green, 85), fade(@green, 85)),
+    url(../img/backgrounds/cat.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  @media (min-resolution: 2dppx) {
+    background-image:
+      linear-gradient(fade(@green, 85), fade(@green, 85)),
+      url("../img/retina/backgrounds/cat@2x.jpg");
+  }
+
   position: relative;
   z-index: 1;
 
@@ -44,25 +57,10 @@
   color: @white;
   text-align: center;
 
-  min-height: 300px;
+  min-height: 302px;
 
-  margin-bottom: 175px;
+  margin-bottom: 180px;
   padding: 25px 20px 136px;
-
-  background:
-    linear-gradient(fade(@green, 85), fade(@green, 85)),
-    url("../img/backgrounds/cat.jpg");
-  background-repeat: no-repeat;
-  background-position: center;
-
-  @media (min-resolution: 2dppx) {
-    background:
-      linear-gradient(fade(@green, 85), fade(@green, 85)),
-      url("../img/retina/backgrounds/cat@2x.jpg");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: contain;
-  }
 
   box-sizing: border-box;
   position: relative;
@@ -170,11 +168,13 @@
 
 .about__button {
   width: 280px;
+  padding-top: 11px;
+  padding-bottom: 11px;
   box-sizing: border-box;
 
   position: absolute;
   left: 50%;
-  bottom: -175px;
+  bottom: -180px;
 
   transform: translateX(-50%);
 
