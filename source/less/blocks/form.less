@@ -51,23 +51,23 @@
   }
 
   @media (min-width: @tablet-width) {
-    margin-top: 65px;
-    margin-bottom: 65px;
+    margin-top: 63px;
+    margin-bottom: 63px;
     padding-left: 0;
     padding-right: 0;
 
     &--border {
-      margin-top: 70px;
-      margin-bottom: 75px;
-      padding-left: 30px;
+      margin-top: 72px;
+      margin-bottom: 74px;
+      padding-left: 28px;
       padding-right: 30px;
-      padding-bottom: 30px;
+      padding-bottom: 28px;
 
       border: 1px solid @border-color;
     }
 
     &--margin {
-      margin-bottom: 60px;
+      margin-bottom: 50px;
 
       .form__title {
         margin-bottom: 60px;
@@ -143,8 +143,14 @@
 
   @media (min-width: @tablet-width) {
     font-size: 20px;
+
+    margin-left: 20px;
     padding-top: 10px;
     padding-bottom: 10px;
+
+    &::placeholder {
+      font-size: 20px;
+    }
   }
 }
 
@@ -165,6 +171,10 @@
 
   &:last-child {
     margin-bottom: 0;
+  }
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 23px;
   }
 }
 
@@ -339,7 +349,7 @@
     font-size: 16px;
     margin-top: 0;
     margin-bottom: 0;
-    margin-left: 60px;
+    margin-left: 65px;
   }
 
   @media (min-width: @desktop-width) {
