@@ -74,6 +74,14 @@
       }
     }
   }
+
+  @media (min-width: @desktop-width) {
+    margin-top: 66px;
+
+    &--margin {
+      margin-bottom: 56px;
+    }
+  }
 }
 
 .form__box {
@@ -104,10 +112,49 @@
   line-height: 1.1;
 
   margin-bottom: 35px;
+  background-color: @white;
+
+  span {
+    position: relative;
+    padding-right: 23px;
+
+    &::before,
+    &::after {
+      content: "";
+
+      width: 100vw;
+      height: 2px;
+
+      background-color: @green;
+      position: absolute;
+      top: 20px;
+      left: 0;
+
+      z-index: -1;
+    }
+  }
 
   @media (min-width: @tablet-width) {
     font-size: 36px;
     margin-bottom: 75px;
+
+    span {
+      display: inline-block;
+
+      margin-left: -40px;
+      padding-left: 40px;
+      padding-right: 40px;
+      background-color: @white;
+
+      &::before,
+      &::after {
+        top: 24px;
+      }
+
+      &::before {
+        left: -100vw;
+      }
+    }
   }
 }
 
@@ -192,6 +239,10 @@
 
   &:focus-within .form__icon {
     color: @green;
+  }
+
+  @media (min-width: @tablet-width) {
+    margin-left: 20px;
   }
 }
 
