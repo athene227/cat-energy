@@ -39,7 +39,11 @@
     padding-bottom: 44px;
   }
 
-  @media (min-width: @desktop-width) {
+  @media (min-width: 915px) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  @media (min-width: 1280px) {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-gap: 80px;
