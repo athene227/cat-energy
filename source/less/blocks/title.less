@@ -1,11 +1,62 @@
 .title {
+  display: inline-block;
+
   color: @black;
-  font-size: 36px;
+  font-size: 24px;
   line-height: 1.1;
   font-weight: 400;
 
+  background-color: @white;
+
+  span {
+    position: relative;
+    padding-right: 23px;
+
+    &::before,
+    &::after {
+      content: "";
+
+      width: 100vw;
+      height: 2px;
+
+      background-color: @green;
+      position: absolute;
+      top: 20px;
+      left: 0;
+
+      z-index: -1;
+    }
+  }
+
+  &--index {
+    font-size: 36px;
+  }
+
   @media (min-width: @tablet-width) {
-    font-size: 60px;
+    font-size: 36px;
     line-height: 1;
+
+    span {
+      display: inline-block;
+
+      margin-left: -40px;
+      padding-left: 40px;
+      padding-right: 40px;
+      background-color: @white;
+
+      &::before,
+      &::after {
+        top: 24px;
+      }
+
+      &::before {
+        left: -100vw;
+      }
+    }
+
+    &--index {
+      font-size: 60px;
+      line-height: 1;
+    }
   }
 }

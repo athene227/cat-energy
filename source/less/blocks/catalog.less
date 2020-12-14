@@ -12,7 +12,7 @@
     font-size: 60px;
 
     margin-top: 40px;
-    margin-bottom: 160px;
+    margin-bottom: 168px;
     padding-left: 0;
   }
 }
@@ -26,7 +26,7 @@
   @media (min-width: @tablet-width) {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-gap: 140px 60px;
+    grid-gap: 146px 60px;
   }
 
   @media (min-width: @desktop-width) {
@@ -45,7 +45,7 @@
 
     margin-bottom: 0;
     padding-top: 75px;
-    padding-bottom: 23px;
+    padding-bottom: 22px;
 
     border-bottom: 1px solid #ebebeb;
     position: relative;
@@ -58,7 +58,7 @@
     }
 
     .button {
-      margin-top: 22px;
+      margin-top: 23px;
     }
 
     &::before,
@@ -85,13 +85,14 @@
 
   @media (min-width: @tablet-width) {
     margin-bottom: 0;
-    padding: 160px 36px 40px;
+    padding: 156px 36px 40px;
 
     background-color: @grey;
     border: none;
     position: relative;
 
     &--see-more {
+      padding-bottom: 80px;
       background-color: @white;
       border: 2px solid @grey;
 
@@ -105,10 +106,16 @@
       }
 
       .button {
-        margin-top: 80px;
-        padding-top: 20px;
-        padding-bottom: 20px;
-        margin-top: 20px;
+        width: 250px;
+        margin-top: 0;
+
+        box-sizing: border-box;
+
+        position: absolute;
+        left: 50%;
+        bottom: 35px;
+
+        transform: translateX(-50%);
       }
 
       &::before {
@@ -195,10 +202,10 @@
     font-size: 20px;
     text-align: center;
 
-    width: 165px;
+    width: 155px;
     margin-left: auto;
     margin-right: auto;
-    margin-bottom: 20px;
+    margin-bottom: 16px;
 
     &--see-more {
       font-size: 20px;
@@ -206,7 +213,7 @@
 
       width: 140px;
       margin: 0 auto;
-      margin-bottom: 20px;
+      margin-bottom: 23px;
     }
   }
 }
@@ -222,7 +229,7 @@
 
   @media (min-width: @tablet-width) {
     font-size: 16px;
-    margin-bottom: 15px;
+    margin-bottom: 18px;
   }
 }
 
