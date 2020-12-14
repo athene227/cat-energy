@@ -1,9 +1,24 @@
 .about {
-  background-color: @white;
+  background-color: @green;
+  background-image:
+    linear-gradient(fade(@green, 85), fade(@green, 85)),
+    url("../img/backgrounds/cat.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  @media (min-resolution: 2dppx) {
+    background-image:
+      linear-gradient(fade(@green, 85), fade(@green, 85)),
+      url("../img/retina/backgrounds/cat@2x.jpg");
+  }
+
   position: relative;
   z-index: 1;
 
   @media (min-width: @tablet-width) {
+    background: @white;
+
     padding-left: 30px;
     padding-right: 30px;
   }
@@ -44,25 +59,10 @@
   color: @white;
   text-align: center;
 
-  min-height: 300px;
+  min-height: 302px;
 
-  margin-bottom: 175px;
+  margin-bottom: 180px;
   padding: 25px 20px 136px;
-
-  background:
-    linear-gradient(fade(@green, 85), fade(@green, 85)),
-    url("../img/backgrounds/cat.jpg");
-  background-repeat: no-repeat;
-  background-position: center;
-
-  @media (min-resolution: 2dppx) {
-    background:
-      linear-gradient(fade(@green, 85), fade(@green, 85)),
-      url("../img/retina/backgrounds/cat@2x.jpg");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: contain;
-  }
 
   box-sizing: border-box;
   position: relative;
@@ -95,9 +95,7 @@
 
     min-height: 820px;
     margin-bottom: 0;
-    padding-left: 90px;
-    padding-right: 0;
-    padding-bottom: 0;
+    padding: 37px 0 0 88px;
 
     background: none;
 
@@ -111,8 +109,8 @@
         background-image: url("../img/retina/backgrounds/food-tablet@2x.jpg");
       }
 
-      left: 360px;
-      bottom: -20px;
+      left: 50%;
+      bottom: -27px;
     }
   }
 
@@ -120,7 +118,7 @@
     width: 610px;
     min-height: 582px;
 
-    padding-top: 90px;
+    padding-top: 86px;
     padding-left: 80px;
     padding-right: 50px;
 
@@ -134,8 +132,8 @@
         background-image: url("../img/retina/backgrounds/food-desktop@2x.png");
       }
 
-      top: 8px;
-      left: 725px;
+      top: 2px;
+      left: 724px;
 
       z-index: -1;
     }
@@ -170,11 +168,13 @@
 
 .about__button {
   width: 280px;
+  padding-top: 11px;
+  padding-bottom: 11px;
   box-sizing: border-box;
 
   position: absolute;
   left: 50%;
-  bottom: -175px;
+  bottom: -180px;
 
   transform: translateX(-50%);
 
@@ -182,10 +182,15 @@
     font-size: 20px;
 
     width: 244px;
-    margin-top: 50px;
-    padding: 15px 26px;
+    margin-top: 52px;
+    margin-left: -6px;
+    padding: 18px 25px;
 
     position: static;
     transform: translateX(0);
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-left: 0;
   }
 }
