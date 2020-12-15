@@ -140,7 +140,9 @@
 
     width: 430px;
     padding: 0;
+
     background-color: #dcdcdc;
+    border: none;
 
     position: relative;
   }
@@ -168,7 +170,7 @@
     top: 50%;
     left: 0;
 
-    transform: translate(-50%, -50%);
+    transform: translateY(-50%);
 
     &::before {
       content: "";
@@ -212,7 +214,7 @@
 
 .slider__radio-before:checked ~ .slider__controls .slider__bar {
   @media (min-width: @tablet-width) {
-    left: 0;
+    margin-left: -10px;
   }
 }
 
@@ -231,5 +233,6 @@
 .slider__radio-after:checked ~ .slider__controls .slider__bar {
   @media (min-width: @tablet-width) {
     left: 100%;
+    margin-left: -20px;
   }
 }

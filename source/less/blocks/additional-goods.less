@@ -1,27 +1,29 @@
 .additional-goods {
-  padding: 30px 20px 35px;
+  padding: 25px 20px 35px;
+  overflow: hidden;
 
   .title {
-    color: @black;
-    font-size: 24px;
-    line-height: 1;
-    font-weight: 400;
-
     margin-top: 0;
-    margin-bottom: 35px;
+    margin-bottom: 30px;
   }
 
   @media (min-width: @tablet-width) {
     padding: 70px 30px 75px;
 
     .title {
-      font-size: 36px;
+      margin-left: 37px;
       margin-bottom: 80px;
     }
   }
 
   @media (min-width: @desktop-width) {
+    padding-top: 75px;
     padding-bottom: 85px;
+
+    .title {
+      margin-left: 0;
+      margin-bottom: 83px;
+    }
   }
 }
 
@@ -36,6 +38,7 @@
 .additional-goods__list {
   list-style: none;
 
+  margin-top: 0;
   margin-bottom: 0;
   padding-left: 0;
 
@@ -45,8 +48,8 @@
 }
 
 .additional-goods__item {
-  padding-top: 15px;
-  padding-bottom: 20px;
+  padding-top: 12px;
+  padding-bottom: 16px;
 
   border-top: 1px solid @border-color-secondary;
 
@@ -63,11 +66,11 @@
 
   @media (min-width: @desktop-width) {
     display: grid;
-    grid-template-columns: 2fr 1fr;
+    grid-template-columns: 610px 245px;
     align-items: center;
     grid-column-gap: 40px;
 
-    padding: 15px 0;
+    padding: 15px 0 16px;
     border-left: none;
     border-right: none;
   }
@@ -123,10 +126,12 @@
   }
 
   @media (min-width: @desktop-width) {
-    width: 285px;
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
+
+    width: 285px;
+    margin-top: 5px;
   }
 }
 

@@ -47,7 +47,7 @@
       }
 
       position: absolute;
-      top: -137px;
+      top: -138px;
       right: 0;
 
       z-index: -2;
@@ -95,7 +95,7 @@
 
     min-height: 820px;
     margin-bottom: 0;
-    padding: 37px 0 0 88px;
+    padding: 37px 0 585px 88px;
 
     background: none;
 
@@ -121,6 +121,7 @@
     padding-top: 86px;
     padding-left: 80px;
     padding-right: 50px;
+    padding-bottom: 0;
 
     &::before {
       width: 550px;
@@ -150,7 +151,7 @@
 
   @media (min-width: @tablet-width) {
     font-size: 60px;
-    margin-bottom: 40px;
+    margin-bottom: 42px;
   }
 }
 
@@ -167,6 +168,8 @@
 }
 
 .about__button {
+  font-size: 14px;
+
   width: 280px;
   padding-top: 11px;
   padding-bottom: 11px;
@@ -182,15 +185,16 @@
     font-size: 20px;
 
     width: 244px;
-    margin-top: 52px;
-    margin-left: -6px;
     padding: 18px 25px;
 
-    position: static;
+    left: 82px;
+    bottom: 499px;
+
     transform: translateX(0);
   }
 
   @media (min-width: @desktop-width) {
-    margin-left: 0;
+    position: static;
+    margin-top: 52px;
   }
 }

@@ -1,5 +1,5 @@
 .copyright {
-  margin-top: 20px;
+  margin-top: 30px;
 
   &:active {
     opacity: 0.3;
@@ -11,9 +11,7 @@
 }
 
 .copyright__link {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  display: block;
 
   color: @dark-grey;
   font-family: @sub-font;
@@ -21,6 +19,9 @@
   line-height: 1.125;
 
   text-decoration: none;
+  padding-right: 50px;
+
+  position: relative;
 
   &:hover .copyright__icon-academy,
   &:focus .copyright__icon-academy {
@@ -29,10 +30,17 @@
 
   @media (min-width: @tablet-width) {
     width: 165px;
+    padding-right: 0;
   }
 }
 
 .copyright__icon-academy {
   color: #666666;
   transition: 0.2s;
+
+  position: absolute;
+  top: 50%;
+  right: 0;
+
+  transform: translateY(-50%);
 }

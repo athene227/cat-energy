@@ -47,7 +47,11 @@
 
   &--margin {
     margin-top: 25px;
-    margin-bottom: 35px;
+    margin-bottom: 40px;
+
+    .form__title {
+      margin-bottom: 40px;
+    }
   }
 
   @media (min-width: @tablet-width) {
@@ -67,19 +71,20 @@
     }
 
     &--margin {
-      margin-bottom: 50px;
+      margin-top: 70px;
+      margin-bottom: 62px;
 
       .form__title {
-        margin-bottom: 60px;
+        margin-bottom: 63px;
       }
     }
   }
 
   @media (min-width: @desktop-width) {
-    margin-top: 66px;
+    margin-top: 68px;
 
     &--margin {
-      margin-bottom: 56px;
+      margin-bottom: 67px;
     }
   }
 }
@@ -107,54 +112,10 @@
 }
 
 .form__title {
-  color: @black;
-  font-size: 24px;
-  line-height: 1.1;
-
   margin-bottom: 35px;
-  background-color: @white;
-
-  span {
-    position: relative;
-    padding-right: 23px;
-
-    &::before,
-    &::after {
-      content: "";
-
-      width: 100vw;
-      height: 2px;
-
-      background-color: @green;
-      position: absolute;
-      top: 20px;
-      left: 0;
-
-      z-index: -1;
-    }
-  }
 
   @media (min-width: @tablet-width) {
-    font-size: 36px;
     margin-bottom: 75px;
-
-    span {
-      display: inline-block;
-
-      margin-left: -40px;
-      padding-left: 40px;
-      padding-right: 40px;
-      background-color: @white;
-
-      &::before,
-      &::after {
-        top: 24px;
-      }
-
-      &::before {
-        left: -100vw;
-      }
-    }
   }
 }
 
@@ -186,6 +147,10 @@
 
   &:focus {
     border-color: @dark-grey;
+  }
+
+  &--error {
+    border-color: @error;
   }
 
   @media (min-width: @tablet-width) {
@@ -345,7 +310,6 @@
 
 .form__list--checkbox {
   color: @black;
-  margin-bottom: 10px;
 
   @media (min-width: @tablet-width) {
     display: grid;
