@@ -53,7 +53,7 @@
                 <picture>
                   <source media="(min-width: 768px)" srcset="img/catalog/tablet/chicken-500.png, img/retina/catalog/tablet/chicken-500@2x.png 2x">
 
-                  <img src="img/catalog/mobile/catalog-1.png" alt="">
+                  <img src="img/catalog/mobile/chicken-500.png" srcset="img/retina/catalog/mobile/chicken-500@2x.png 2x" alt="Cat Energy PRO 500г">
                 </picture>
               </a>
 
@@ -82,7 +82,7 @@
                 <picture>
                   <source media="(min-width: 768px)" srcset="img/catalog/tablet/chicken-1000.png, img/retina/catalog/tablet/chicken-1000@2x.png 2x">
 
-                  <img src="img/catalog/mobile/catalog-2.png" alt="">
+                  <img src="img/catalog/mobile/chicken-1000.png" srcset="img/retina/catalog/mobile/chicken-1000@2x.png 2x" alt="Cat Energy PRO 1000г">
                 </picture>
               </a>
 
@@ -111,7 +111,7 @@
                 <picture>
                   <source media="(min-width: 768px)" srcset="img/catalog/tablet/fish-500.png, img/retina/catalog/tablet/fish-500@2x.png 2x">
 
-                  <img src="img/catalog/mobile/catalog-3.png" alt="">
+                  <img src="img/catalog/mobile/fish-500.png" srcset="img/retina/catalog/mobile/fish-500@2x.png 2x" alt="Cat Energy PRO 500г">
                 </picture>
               </a>
 
@@ -140,7 +140,7 @@
                 <picture>
                   <source media="(min-width: 768px)" srcset="img/catalog/tablet/fish-1000.png, img/retina/catalog/tablet/fish-1000@2x.png 2x">
 
-                  <img src="img/catalog/mobile/catalog-4.png" alt="">
+                  <img src="img/catalog/mobile/fish-1000.png" srcset="img/retina/catalog/mobile/fish-1000@2x.png 2x" alt="Cat Energy PRO 1000г">
                 </picture>
               </a>
 
@@ -169,7 +169,7 @@
                 <picture>
                   <source media="(min-width: 768px)" srcset="img/catalog/tablet/buckwheat-500.png, img/retina/catalog/tablet/buckwheat-500@2x.png 2x">
 
-                  <img src="img/catalog/mobile/catalog-5.png" alt="">
+                  <img src="img/catalog/mobile/buckwheat-500.png" srcset="img/retina/catalog/mobile/buckwheat-500@2x.png 2x" alt="Cat Energy slim 500г">
                 </picture>
               </a>
 
@@ -198,7 +198,7 @@
                 <picture>
                   <source media="(min-width: 768px)" srcset="img/catalog/tablet/buckwheat-1000.png, img/retina/catalog/tablet/buckwheat-1000@2x.png 2x">
 
-                  <img src="img/catalog/mobile/catalog-6.png" alt="">
+                  <img src="img/catalog/mobile/buckwheat-1000.png" srcset="img/retina/catalog/mobile/buckwheat-1000@2x.png 2x" alt="Cat Energy slim 1000г">
                 </picture>
               </a>
 
@@ -227,7 +227,7 @@
                 <picture>
                   <source media="(min-width: 768px)" srcset="img/catalog/tablet/rice-500.png, img/retina/catalog/tablet/rice-500@2x.png 2x">
 
-                  <img src="img/catalog/mobile/catalog-7.png" alt="">
+                  <img src="img/catalog/mobile/rice-500.png" srcset="img/retina/catalog/mobile/rice-500@2x.png 2x" alt="Cat Energy slim 500г">
                 </picture>
               </a>
 
@@ -388,22 +388,7 @@
     </section>
   </footer>
 
-  <script>
-    var navMain = document.querySelector('.nav');
-    var navToggle = document.querySelector('.nav__toggle');
-
-    navMain.classList.remove('nav--nojs');
-
-    navToggle.addEventListener('click', function() {
-      if (navMain.classList.contains('nav--closed')) {
-        navMain.classList.remove('nav--closed');
-        navMain.classList.add('nav--opened');
-      } else {
-        navMain.classList.add('nav--closed');
-        navMain.classList.remove('nav--opened');
-      }
-    });
-  </script>
+  <script src="js/app.js"></script>
 
 </body>
 </html>
