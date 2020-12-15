@@ -29,13 +29,22 @@
 
   @media (min-width: @tablet-width) {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 324px 324px;
     grid-gap: 146px 60px;
+
+    width: 708px;
+    margin: 0 auto;
+  }
+
+  @media (min-width: 1152px) {
+    grid-template-columns: repeat(3, 324px);
+    width: 1092px;
   }
 
   @media (min-width: @desktop-width) {
     grid-template-columns: repeat(4, 1fr);
     grid-gap: 147px 80px;
+    width: auto;
   }
 }
 
