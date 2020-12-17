@@ -14,7 +14,6 @@ const rename = require("gulp-rename");
 const del = require("del");
 const sync = require("browser-sync").create();
 
-
 // HTML
 
 const html = () => {
@@ -74,9 +73,9 @@ exports.images = images;
 // Webp
 
 const createWebp = () => {
-  return gulp.src("source/img/**/*.{jpg,png}")
+  return gulp.src("source/img/catalog/**/*.{jpg,png}")
     .pipe(webp({quality: 90}))
-    .pipe(gulp.dest("build/img"))
+    .pipe(gulp.dest("build/img/catalog"))
 }
 
 exports.createWebp = createWebp;
