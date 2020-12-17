@@ -18,10 +18,10 @@
   background-image: url("../img/backgrounds/gift.jpg");
   background-repeat: no-repeat;
   background-position: center;
+  background-size: cover;
 
   @media (min-resolution: 2dppx) {
     background-image: url("../img/retina/backgrounds/gift@2x.jpg");
-    background-size: contain;
   }
 
   box-sizing: border-box;
@@ -72,6 +72,10 @@
 
     background-image: url("../img/backgrounds/gift.jpg");
     background-size: cover;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/retina/backgrounds/gift@2x.jpg");
+    }
 
     &::before {
       top: 58px;
