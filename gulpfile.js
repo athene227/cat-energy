@@ -47,7 +47,7 @@ exports.styles = styles;
 // Scripts
 
 const scripts = () => {
-  return gulp.src("source/js/app.js")
+  return gulp.src("source/js/*.js")
     .pipe(uglify())
     .pipe(rename("app.min.js"))
     .pipe(gulp.dest("build/js"))
@@ -68,8 +68,6 @@ const images = () =>  {
     .pipe(gulp.dest("build/img"))
 }
 
-exports.images = images;
-
 // Webp
 
 const createWebp = () => {
@@ -77,8 +75,6 @@ const createWebp = () => {
     .pipe(webp({quality: 90}))
     .pipe(gulp.dest("build/img/catalog"))
 }
-
-exports.createWebp = createWebp;
 
 // Sprite
 
@@ -89,15 +85,12 @@ const sprite = () => {
     .pipe(gulp.dest("build/img/icons"))
 }
 
-exports.sprite = sprite;
-
 // Copy
 
 const copy = (done) => {
   gulp.src([
     "source/fonts/*",
-    "source/*.ico",
-    "source/img/**/*"
+    "source/*.ico"
   ], {
     base: "source"
   })
@@ -105,15 +98,11 @@ const copy = (done) => {
   done();
 }
 
-exports.copy = copy;
-
 // Clean
 
 const clean = () => {
   return del(["build"]);
 }
-
-exports.clean = clean;
 
 // Build
 
@@ -137,7 +126,7 @@ exports.build = build;
 const server = (done) => {
   sync.init({
     server: {
-      baseDir: 'build'
+      baseDir: "build"
     },
     cors: true,
     notify: false,
@@ -145,8 +134,6 @@ const server = (done) => {
   });
   done();
 }
-
-exports.server = server;
 
 // Watcher
 
@@ -162,6 +149,7 @@ exports.default = gulp.series(
     html,
     styles,
     scripts,
+    images,
     createWebp,
     sprite,
     copy
