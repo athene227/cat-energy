@@ -9,31 +9,31 @@
   &:active {
     opacity: 0.6;
   }
-}
 
-.logo--header {
-  padding-left: 20px;
+  &--header {
+    padding-left: 20px;
 
-  @media (min-width: @tablet-width) {
-    padding-left: 0;
+    @media (min-width: @tablet-width) {
+      padding-left: 0;
 
-    img {
-      width: 174px;
+      img {
+        width: 174px;
+      }
+    }
+
+    @media (min-width: @desktop-width) {
+      img {
+        width: 202px;
+      }
     }
   }
 
-  @media (min-width: @desktop-width) {
-    img {
-      width: 202px;
+  &--footer {
+    text-align: center;
+    margin-bottom: 28px;
+
+    @media (min-width: @tablet-width) {
+      margin-bottom: 0;
     }
-  }
-}
-
-.logo--footer {
-  text-align: center;
-  margin-bottom: 28px;
-
-  @media (min-width: @tablet-width) {
-    margin-bottom: 0;
   }
 }

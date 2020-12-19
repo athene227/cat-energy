@@ -31,7 +31,7 @@
 }
 
 .address__title {
-  color: #111111;
+  color: @subtitle-color;
   font-size: 16px;
   line-height: 1.25;
   font-weight: 400;
@@ -60,16 +60,18 @@
     line-height: 1.2;
     text-align: right;
     width: 160px;
-
-    span {
-      display: inline-block;
-      margin-top: 21px;
-    }
   }
 
   @media (min-width: @desktop-width) {
     text-align: left;
     width: 168px;
     margin-top: -2px;
+  }
+}
+
+.address__text-breakline {
+  @media (min-width: @tablet-width) {
+    display: inline-block;
+    margin-top: 21px;
   }
 }
